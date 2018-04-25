@@ -1,2 +1,2 @@
 ## springmvc-fileupload2download
-文件的上传与下载的简单demo。
+SpringMVC 实现文件上传与下载的简单demo。
