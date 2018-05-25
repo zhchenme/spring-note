@@ -1,4 +1,6 @@
 ## springmvc-fileupload2download
-SpringMVC 实现文件上传与下载的简单demo。
+SpringMVC 实现文件上传与下载的简单demo
 ## springmvc-exception
-SpringMVC 异常处理。
+SpringMVC 异常处理
+## spring-aop
+基于注解与 xml 配置文件两种形式的 AOP demo
