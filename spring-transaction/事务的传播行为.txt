@@ -1,0 +1,13 @@
+一、什么是事务的传播行为
+    即一个事务方法调用另外一个事务方法时，该如何选择事务，Spring 一共提供了 7 中传播行为。
+	
+二、事务传播机制
+    REQUIRED：Spring 默认的传播行为。
+		A.methodA() 调用 B 的 methodB() 方法，那么如果 A 的方法包含事务，则 B 的方法不从新开启事务
+	1、如果B的methodB()抛出异常，A的methodB()没有捕获，则A和B的事务都会回滚；
+	2、如果A的methodA()运行期间异常，则A和B的Method的事务都会被回滚
+	
+	NEW：
+	1、如果A存在事务，A.methodA()抛出异常，A.methodA()的事务被回滚，但B.methodB()事务不受影响；
+	2、如果B.methodB()抛出异常，A不捕获的话，A.methodA()和B.methodB()的事务都会被回滚。
+		如果A捕获的话，A.methodA()的事务不受影响但B.methodB()的事务回滚。
